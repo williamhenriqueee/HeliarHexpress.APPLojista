@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "706902881211",
+    "firebase_url": "https://heliarexpressvm2.firebaseio.com",
+    "project_id": "heliarexpressvm2",
+    "storage_bucket": "heliarexpressvm2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:706902881211:android:a1745b5c010dce431b0a9e",
+        "android_client_info": {
+          "package_name": "com.clarios.mts.heliarexpress.ios"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "706902881211-c4k2gu6uho16fe832t9ref10pgfkmfmd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA4xE50emJJWsu-Uji11YDFTMf-HL1Clj0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "706902881211-c4k2gu6uho16fe832t9ref10pgfkmfmd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

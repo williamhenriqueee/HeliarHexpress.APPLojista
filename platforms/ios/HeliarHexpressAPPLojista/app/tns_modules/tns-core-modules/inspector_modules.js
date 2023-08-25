@@ -1,0 +1,1 @@
+require("./../../runtime.js");require("./../../vendor.js");module.exports=(global.webpackJsonp=global.webpackJsonp||[]).push([[3],{118:function(e){e.exports=JSON.parse('{"android":{"v8Flags":"--expose_gc","forceLog":true,"markingMode":"none"},"main":"app.js","name":"tns-template-vue","version":"3.2.0","discardUncaughtJsExceptions":true}')}},[[781,0,1]]]);

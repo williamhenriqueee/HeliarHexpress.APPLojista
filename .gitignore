@@ -1,0 +1,14 @@
+node_modules
+.vs
+.vscode
+.idea
+/.vs/HeliarAPPMaster/config/applicationhost.config
+/.vs/HeliarHexpress.APPLojista/config/applicationhost.config
+/.vs/HeliarHexpress.APPLojista/FileContentIndex/6c008b33-f47b-4cb7-8f62-3a7ea88b973e.vsidx
+/.vs/HeliarHexpress.APPLojista/FileContentIndex/30d842da-cc51-4cb4-815e-b40f29022314.vsidx
+/.vs/HeliarHexpress.APPLojista/FileContentIndex/3bc53820-4995-4d53-8638-509dade1d17d.vsidx
+/.vs/HeliarHexpress.APPLojista/FileContentIndex/a648063f-3d08-4f3b-839b-f0be6c16cf2a.vsidx
+/.vs/HeliarHexpress.APPLojista/FileContentIndex/read.lock
+/.vs/HeliarHexpress.APPLojista/FileContentIndex/c365ac2b-e9f7-40c1-a405-5e393ae92ad2.vsidx
+/.vs/HeliarHexpress.APPLojista/v17/.suo
+/.vs/HeliarHexpress.APPLojista/FileContentIndex

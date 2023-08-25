@@ -1,0 +1,7 @@
+1) Incluir o arquivo heliar.jks (que se encontra aqui na raiz) no caminho C:\projetosmobile\heliarexpress-app\app 
+2) Para cada publicação na loja, precisamos alterar o arquivo .androidmanifest.xml, alterando os campos da versão de android:versionCode="20000" para android:versionCode="20001" e android:versionName="2.0.0" para android:versionName="2.0.1"
+3) Utilizar o comando: tns build android --release --key-store-path C:/ProjetosMobile/heliarexpress-app/app/heliar.jks --key-store-password 123456 --key-store-alias heliarlojistadev --key-store-alias-password 123456 --compileSdk 29
+4) Será gerado um .APK, esse arquivo deverá ser atualizado na loja através do link https://play.google.com/apps/publish/  login: vm2.playstore@gmail.com senha: VM@2playstore
+
+
+Obs: Se o pacote não for gerado, por conta do erro "Execution failed for task ':app:validateSigningRelease'.", dar uma olhada nesse artigo https://stackoverflow.com/questions/42353936/keystore-file-errorexecution-failed-for-task-appvalidatesigningrelease

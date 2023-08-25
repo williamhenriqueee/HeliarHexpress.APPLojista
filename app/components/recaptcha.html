@@ -1,0 +1,16 @@
+<html>
+  <head>
+    <title>reCAPTCHA demo: Simple page</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  </head>
+  <body>
+    <form action="?" method="POST">
+      <div class="g-recaptcha isRecaptcha" data-callback='onSubmit'  id="isRecaptcha" data-sitekey="6Lfiz4MkAAAAAAfhBPpQQaUv0pbYMTSR-HhhUb0v"></div>
+    </form>
+	<script>
+	   function onSubmit(token) {
+		 window.location.href = window.location + "?sucess=true";
+	   }
+	</script>
+  </body>
+</html>
