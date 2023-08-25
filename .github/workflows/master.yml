@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       
-      - name: Install six
+      - name: Install six 
         run: pip install six
         
       - name: Use Node.js
