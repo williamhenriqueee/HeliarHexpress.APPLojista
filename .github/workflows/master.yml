@@ -40,8 +40,9 @@ jobs:
           sudo pip install --upgrade pip 
           pip install --user --upgrade matplotlib 
           pip install six  
-          tns doctor 
-
+          tns doctor
+          chmod +x /path/to/copy-www-build-step.sh
+ 
       - name: Build IOS release 
         run: tns build ios --release --env.production --provision 7cd0e1db-8bf6-4341-a96a-b84dd56c254f 
 
