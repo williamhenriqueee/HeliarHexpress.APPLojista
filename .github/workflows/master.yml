@@ -37,7 +37,6 @@ jobs:
       - name: Install nativescript
         run: |
           npm install -g nativescript@v6.8
-          pod install 
           sudo pip install --upgrade pip 
           pip install --user --upgrade matplotlib 
           pip install six  
