@@ -43,8 +43,8 @@ jobs:
           tns doctor
  
       - name: Build IOS release 
-        run: tns build ios --env.uglify --env.production --release 7cd0e1db-8bf6-4341-a96a-b84dd56c254f 
-
+        run: tns build ios --env.uglify --env.production --release 
+        #7cd0e1db-8bf6-4341-a96a-b84dd56c254f 
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
