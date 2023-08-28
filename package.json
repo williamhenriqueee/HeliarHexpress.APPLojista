@@ -6,7 +6,7 @@
   "nativescript": {
     "id": "com.vm2.heliarexpress",
     "tns-ios": {
-      "version": "6.5.0"
+      "version": "6.5.5"
     },
     "tns-android": {
       "version": "6.5.3"
