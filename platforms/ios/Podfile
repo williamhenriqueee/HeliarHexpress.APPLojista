@@ -1,9 +1,8 @@
-platform :ios, '11.0'
-
 use_frameworks!
 
 target "HeliarHexpressAPPLojista" do
 # NativeScriptPlatformSection /Users/runner/work/HeliarHexpress.APPLojista/HeliarHexpress.APPLojista/node_modules/@nativescript/core/platforms/ios/Podfile
+platform :ios, '11.0'
 # End NativeScriptPlatformSection
 
 # Begin Podfile - /Users/runner/work/HeliarHexpress.APPLojista/HeliarHexpress.APPLojista/node_modules/@nativescript/core/platforms/ios/Podfile
