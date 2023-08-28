@@ -2,7 +2,7 @@ use_frameworks!
 
 target "HeliarHexpressAPPLojista" do
 # NativeScriptPlatformSection /Users/runner/work/HeliarHexpress.APPLojista/HeliarHexpress.APPLojista/app/App_Resources/iOS/Podfile
-# End NativeScriptPlatformSection
+# End NativeScriptPlatformSection 
 
 # Begin Podfile - /Users/runner/work/HeliarHexpress.APPLojista/HeliarHexpress.APPLojista/node_modules/@nativescript/core/platforms/ios/Podfile
 use_frameworks!
