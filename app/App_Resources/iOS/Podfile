@@ -95,7 +95,6 @@ pod 'Firebase/Messaging'
 # Begin Podfile - /Users/runner/work/HeliarHexpress.APPLojista/HeliarHexpress.APPLojista/node_modules/nativescript-secure-storage/platforms/ios/Podfile
 pod 'SAMKeychain', '~> 1.5.3'
 # End Podfile
-end
 
 post_install do |pi|
     pi.pods_project.targets.each do |t|
