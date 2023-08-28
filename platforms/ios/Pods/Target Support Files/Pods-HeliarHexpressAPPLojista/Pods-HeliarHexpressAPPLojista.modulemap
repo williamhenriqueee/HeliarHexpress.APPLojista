@@ -1,6 +1,0 @@
-framework module Pods_HeliarHexpressAPPLojista {
-  umbrella header "Pods-HeliarHexpressAPPLojista-umbrella.h"
-
-  export *
-  module * { export * }
-}
