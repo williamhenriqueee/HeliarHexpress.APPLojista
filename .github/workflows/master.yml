@@ -21,7 +21,7 @@ jobs:
       - uses: apple-actions/import-codesign-certs@v1
         with: 
             p12-filepath: './William Silva Dev Key.p12'
-            p12-password: APPLE@@2023 
+            p12-password: apple@@2023 
  
       - name: Provisioning Profiles 
         run: | 
