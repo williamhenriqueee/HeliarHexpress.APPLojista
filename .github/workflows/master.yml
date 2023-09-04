@@ -43,7 +43,7 @@ jobs:
           tns doctor
         
       - name: Build IOS release 
-        run: tns build ios --for-device --env.production
+        run: tns build ios --for-device --env.production --provision e70f7636-7a7c-4aee-bc8e-636a71f07129
 
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
