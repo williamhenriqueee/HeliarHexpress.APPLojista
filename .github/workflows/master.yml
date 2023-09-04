@@ -18,10 +18,10 @@ jobs:
         with:
           node-version: 14
 
-      #- uses: apple-actions/import-codesign-certs@v1
-      #  with: 
-      #      p12-filepath: './Mobile/publishing.requirements/iOS/Certificates.p12'
-      #      p12-password: ${{ secrets.APPLE_CERT_P12_PASSWORD }} 
+      - uses: apple-actions/import-codesign-certs@v1
+        with: 
+            p12-filepath: './com.clarios.mts.heliarexpress.ios.dev.p12'
+            p12-password: apple@@2023 
  
       - name: Provisioning Profiles 
         run: | 
