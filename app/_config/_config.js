@@ -1,7 +1,7 @@
 import { isNullOrUndefined } from "util";
 const _chaveToken = "device_token";
 const _deviceid = "device_id"
-const _apiUrl = "https://www.heliarexpress.com.br/api/";
+const _apiUrl = "https://br-heliarexpress-qa.clarios.com/api/";
 var applicationSettings = require("application-settings");
 export default class Config {    
 
