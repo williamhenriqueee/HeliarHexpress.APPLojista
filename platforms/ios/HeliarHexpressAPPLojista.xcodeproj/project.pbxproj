@@ -572,7 +572,7 @@
 			);
 			name = "NativeScript PreBuild";
 			outputPaths = (
-				"/HeliarHexpress.APPLojista/platforms/ios/build/Debug-iphoneos/metadata-arm64.bin",
+				"/Users/runner/work/HeliarHexpress.APPLojista/HeliarHexpress.APPLojista/platforms/ios/build/Debug-iphoneos/metadata-arm64.bin",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
