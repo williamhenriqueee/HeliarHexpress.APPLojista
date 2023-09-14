@@ -42,7 +42,7 @@
                         class="btn btn-primary btn-green m-t-20"></Button>
                     <Label *v-show="isLoggingIn" text="Esqueceu sua senha?"
                         class="login-label" @tap="forgotPassword()"></Label>
-                    <WebView v-if="!this.isRecaptcha" src="https://www.heliarexpress.com.br/recaptcha.html" @loadFinished='(e)=> {this.recaptcha(e)}' />
+                    <!--<WebView v-if="!this.isRecaptcha" src="https://www.heliarexpress.com.br/recaptcha.html" @loadFinished='(e)=> {this.recaptcha(e)}' />-->
                         </StackLayout>
                     </GridLayout>
                 </StackLayout>
@@ -67,7 +67,7 @@
             return {
                 isLoggingIn: true,
                 processing: false,
-                isRecaptcha: false,
+                //isRecaptcha: false,
                 user: {
                     email: "",
                     password: "",
@@ -77,11 +77,11 @@
             };            
         },
         methods: {
-            recaptcha(e) {
-                if(e.url.indexOf("sucess=true") != -1) {
-                    this.isRecaptcha = true;
-                }
-            },
+            //recaptcha(e) {
+            //    if(e.url.indexOf("sucess=true") != -1) {
+            //        this.isRecaptcha = true;
+            //    }
+            //},
             toggleForm() {
                 this.isLoggingIn = !this.isLoggingIn;
             },
@@ -105,10 +105,10 @@
                     return;
                 }
 
-                if( !this.isRecaptcha ) {
-                    this.retornoLogin = "Por favor, preencha o captcha!";
-                    return;
-                }
+                //if( !this.isRecaptcha ) {
+                //    this.retornoLogin = "Por favor, preencha o captcha!";
+                //    return;
+                //}
 
                 this.processing = true;
                 if (this.isLoggingIn) {

@@ -584,7 +584,7 @@ var config = new _config_config__WEBPACK_IMPORTED_MODULE_1__["default"]();
     return {
       isLoggingIn: true,
       processing: false,
-      isRecaptcha: false,
+      //isRecaptcha: false,
       user: {
         email: "",
         password: "",
@@ -595,11 +595,11 @@ var config = new _config_config__WEBPACK_IMPORTED_MODULE_1__["default"]();
   },
 
   methods: {
-    recaptcha(e) {
-      if (e.url.indexOf("sucess=true") != -1) {
-        this.isRecaptcha = true;
-      }
-    },
+    //recaptcha(e) {
+    //  if (e.url.indexOf("sucess=true") != -1) {
+    //    this.isRecaptcha = true;
+    //  }
+    //},
 
     toggleForm() {
       this.isLoggingIn = !this.isLoggingIn;
@@ -623,10 +623,10 @@ var config = new _config_config__WEBPACK_IMPORTED_MODULE_1__["default"]();
         return;
       }
 
-      if (!this.isRecaptcha) {
-        this.retornoLogin = "Por favor, preencha o captcha!";
-        return;
-      }
+      //if (!this.isRecaptcha) {
+      //  this.retornoLogin = "Por favor, preencha o captcha!";
+      //  return;
+      //}
 
       this.processing = true;
 
