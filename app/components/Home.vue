@@ -1,17 +1,17 @@
 <template>
     <Page actionBarHidden="false">
-        <ActionBar title="">
+        <ActionBar backgroundColor="#045244" title="">
             <StackLayout orientation="horizontal"
                 ios:horizontalAlignment="left"
                 android:horizontalAlignment="left">
                 <Image src="~/images/logo.png" style="height:100px; float:right;"></Image>
             </StackLayout>
             <ActionItem ios:horizontalAlignment="right" @tap="editar">
-                <Image src="~/images/logo-topo.png"></Image>
+                <Image src="~/images/logo-topo.png" style="height:100px; float:left;"></Image>
                 <Image class="edicao" src="res://edicao"></Image>
             </ActionItem>
             <ActionItem ios:horizontalAlignment="right" @tap="logout">
-                <Image src="~/images/logo-topo.png"></Image>
+                <Image src="~/images/logo-topo.png" style="height:100px; float:left;"></Image>
                 <Image class="sair" src="res://sair"></Image>
             </ActionItem>            
         </ActionBar> 
