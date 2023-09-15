@@ -1,6 +1,6 @@
 <template>
     <Page actionBarHidden="false">
-        <ActionBar backgroundColor="#045244" title="">
+        <ActionBar backgroundColor="#ffffff" title="">
             <StackLayout orientation="horizontal"
                 ios:horizontalAlignment="left"
                 android:horizontalAlignment="left">
