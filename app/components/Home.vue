@@ -6,11 +6,11 @@
                 android:horizontalAlignment="left">
                 <Image src="~/images/logo.png" style="height:100px; float:right;"></Image>
             </StackLayout>
-            <ActionItem  @tap="editar">
+            <ActionItem ios:horizontalAlignment="right" @tap="editar">
                 <Image src="~/images/logo-topo.png"></Image>
                 <Image class="edicao" src="res://edicao"></Image>
             </ActionItem>
-            <ActionItem @tap="logout">
+            <ActionItem ios:horizontalAlignment="right" @tap="logout">
                 <Image src="~/images/logo-topo.png"></Image>
                 <Image class="sair" src="res://sair"></Image>
             </ActionItem>            
