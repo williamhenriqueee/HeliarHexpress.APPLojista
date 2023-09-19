@@ -1,22 +1,18 @@
 <template>
     <Page actionBarHidden="false">
-        <ActionBar backgroundColor="#ffffff" title="">
-            <StackLayout orientation="horizontal"
-                ios:horizontalAlignment="left"
-                android:horizontalAlignment="left">
-                <Image src="~/images/logo.png" style="height:100px; float:right;"></Image>
-            </StackLayout>
-            <ActionItem ios:horizontalAlignment="right" @tap="editar">
-                <Image src="~/images/logo-topo.png" style="height:100px; float:left;"></Image>
-                <Image class="edicao" src="res://edicao"></Image>
+        <ActionBar flat="true" title="">
+            <StackLayout>
+                <Image src="~/images/logo.png" style="height:100px; float:left;"></Image>               
+            </StackLayout>  
+            <ActionItem ios.position="right" width="50" @tap="editar">
+                <Image src="~/images/edicao.png" style="float:right;"></Image>
             </ActionItem>
-            <ActionItem ios:horizontalAlignment="right" @tap="logout">
-                <Image src="~/images/logo-topo.png" style="height:100px; float:left;"></Image>
-                <Image class="sair" src="res://sair"></Image>
-            </ActionItem>            
+            <ActionItem ios.position="right" width="50" @tap="logout">
+                <Image src="~/images/sair.png" style="float:right;"></Image>
+            </ActionItem>                       
         </ActionBar> 
-        <StackLayout backgroundColor="#045244"> 
-         <Tabs :selectedIndex="selectedIndex">
+        <StackLayout> 
+         <Tabs selectedIndex="0">
             <TabStrip>
                 <TabStripItem @tap="pedidos">
                     <Label text="Pedidos"></Label>
@@ -27,9 +23,9 @@
                     <Image src="res://settings"></Image>
                 </TabStripItem>
             </TabStrip>
-            <TabContentItem>
-                <ScrollView>
-                    <ListView for="item in items" class="list-group">
+            <TabContentItem >
+                <ScrollView >
+                    <ListView for="item in items" class="list-group" style="backgroundColor:#045244">
                         <v-template>
                             <GridLayout columns="2/6*, 2/6*" backgroundColor="#148A64" rows="20,20,20,20,20,20,20,20" >						
                                 <Label class="lbl" col="0" row="0"  text="Código:" textWrap="true"></Label>                          
@@ -67,7 +63,7 @@
                     </StackLayout>
                     <Button class="btn btn-primary btn-grey" :text="Status" @tap="statusPedido" />
 
-                    <ListView for="item in itemsHistorico" class="list-group">
+                    <ListView for="item in itemsHistorico" class="list-group" style="backgroundColor:#045244>"
                         <v-template>
                             <GridLayout columns="2/6*, 2/6*" backgroundColor="#888888" rows="20,20,20,20,20,20,20,20" >						
                                 <Label class="lbl" col="0" row="0"  text="Código:" textWrap="true"></Label>                          
@@ -91,6 +87,7 @@
 </template>
 
 <script>
+
     import Login from "./Login";
     import Pedido from "./Pedido";
     import Editar from "./Editar";
@@ -174,6 +171,7 @@
             if (this.Historico == true){
                 this.selectedIndex = 1;
             }
+            
         },
         filters: {
             FormataData: function (value) {
@@ -312,16 +310,19 @@
                 }); 
             },
             pedidos(){
+                setTimeout(() => {
                  this.$heliarApp
-                    .pedidos()
+                    .pedidos() 
                     .then((response)=> {
                         this.items = response.Pedidos;
                     })
                     .catch(() => {
                         alert("Erro ao encontrar seus pedidos");
-                    });
+                    }); }
+                    , 1000);
             },
             pedidosHistorico(){
+                setTimeout(() =>  {
                 this.$heliarApp
                     .pedidosHistorico(this.PedidoStatus,  this.ValueDataDe, this.ValueDataAte)
                     .then((responseHistorico)=> {
@@ -329,7 +330,8 @@
                     })
                     .catch(() => {
                         alert("Erro ao encontrar seus pedidos");
-                    });
+                    });}
+                    , 1000);
             },
             visualizar(e, isHistorico) {
                 this.$navigateTo(Pedido, {

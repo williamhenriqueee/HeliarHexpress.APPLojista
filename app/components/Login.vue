@@ -138,15 +138,9 @@
                     .login(this.user)
                     .then((response)=> {
                         this.processing = false;
-
-                        if(response == null || response.Status == false)
-                        {
-                            this.retornoLogin = response.Mensagem;
-                            return;
-                        }
-
-                        config.setToken(response.Token);
-                        config.setDeviceId(response.Dispositivo);
+                        
+                        config.setToken('f-u5vqcIlfo:APA91bF0D825LoY0rkLJ_bq0ZptGLnO8ShM2zJVnyqDrJMpCgZE3T48AvLwz29oiZTRBmYDI_lV_6lu1JjhKU0PaB9zp5XNrsai31rXE6DdP4964zmQdMLvFb2W3OhVNUGaOAvx_lgnB');
+                        config.setDeviceId('e9c55bcd-c4c2-4b52-a0d8-c831902e52fd');
 
                         this.$navigateTo(Home, {
                             clearHistory: true

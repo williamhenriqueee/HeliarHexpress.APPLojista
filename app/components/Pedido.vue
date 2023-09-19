@@ -568,16 +568,16 @@
     .telefone-format{
          background-image: url('~/images/ligar.png');
          background-repeat: no-repeat;
-         background-size: 150px 70px;
+         background-size: 50px 17px;
          background-position: right;
-         padding: 0 180px 0 0;         
+         width: 550px;
     }
     .whats-format{
          background-image: url('~/images/whats.png');
          background-repeat: no-repeat;
-         background-size: 50px 50px;
+         background-size: 17px 17px;
          background-position: right;
-         padding: 0 80px 0 0;         
+         width: 510px;    
     }
     .img-mapa{
          width: 190px;
