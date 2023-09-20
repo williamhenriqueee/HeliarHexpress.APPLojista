@@ -115,9 +115,6 @@
                 .then((response)=> {   
                     if(response.Status == true) {                      
                         this.alert(response.Mensagem);
-                         this.$navigateTo(Home, {
-                                clearHistory: true
-                            });
                     }
                     else{
                         this.alert(response.Mensagem);
