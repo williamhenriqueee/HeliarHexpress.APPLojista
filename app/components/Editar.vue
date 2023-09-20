@@ -114,10 +114,7 @@
                 .salvarDados(this.Usuario.Codigo, this.Usuario.Nome, this.Usuario.Email, this.Usuario.Senha, this.Usuario.SenhaAtual, this.Usuario.ConfirmarSenha)
                 .then((response)=> {   
                     if(response.Status == true) {                      
-                        this.alert(response.Mensagem);
-                         this.$navigateTo(Home, {
-                                clearHistory: true
-                            });
+                        this.alert(response.Mensagem);                        
                     }
                     else{
                         this.alert(response.Mensagem);

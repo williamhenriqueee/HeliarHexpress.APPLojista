@@ -12,7 +12,7 @@
             </ActionItem>                       
         </ActionBar> 
         <StackLayout> 
-         <Tabs selectedIndex="0">
+         <Tabs :selectedIndex="selectedIndex">
             <TabStrip>
                 <TabStripItem @tap="pedidos">
                     <Label text="Pedidos"></Label>
@@ -27,7 +27,7 @@
                 <ScrollView >
                     <ListView for="item in items" class="list-group" style="backgroundColor:#045244">
                         <v-template>
-                            <GridLayout columns="2/6*, 2/6*" backgroundColor="#148A64" rows="20,20,20,20,20,20,20,20" >						
+                            <GridLayout columns="2/6*, 2/6*" paddingTop="20" paddingBottom="20" backgroundColor="#148A64" rows="20,20,20,20,20,20,20,20" >						
                                 <Label class="lbl" col="0" row="0"  text="Código:" textWrap="true"></Label>                          
                                 <Label class="lbl lbl-bold" col="0" row="1"  :text="item.Codigo" textWrap="true"></Label>
                                 <Label class="lbl" col="0" row="2"  text="Loja:" textWrap="true"></Label>
@@ -63,9 +63,9 @@
                     </StackLayout>
                     <Button class="btn btn-primary btn-grey" :text="Status" @tap="statusPedido" />
 
-                    <ListView for="item in itemsHistorico" class="list-group" style="backgroundColor:#045244>"
+                    <ListView for="item in itemsHistorico" class="list-group" height="100%" style="backgroundColor:#045244;">
                         <v-template>
-                            <GridLayout columns="2/6*, 2/6*" backgroundColor="#888888" rows="20,20,20,20,20,20,20,20" >						
+                            <GridLayout columns="2/6*, 2/6*" paddingTop="20" paddingBottom="20"  backgroundColor="#888888" rows="20,20,20,20,20,20,20,20"  >						
                                 <Label class="lbl" col="0" row="0"  text="Código:" textWrap="true"></Label>                          
                                 <Label  class="lbl lbl-bold" col="0" row="1"  :text="item.Codigo" textWrap="true"></Label>
                                 <Label class="lbl" col="0" row="2"  text="Loja:" textWrap="true"></Label>
@@ -75,7 +75,7 @@
                                 <Label class="lbl" col="0" row="6"  text="Status:" textWrap="true"></Label>
                                 <Label class="lbl lbl-bold" col="0" row="7"  :text="item.Status" ></Label>
                                 
-                                <Button  rowSpan="6" row="0" col="1" class="btn btn-primary btn-orange" text="Visualizar" @tap="visualizar(item, true)"></Button>
+                                <Button  rowSpan="6" row="0" col="1" class="btn btn-primary btn-orange" text="Visualizar"  @tap="visualizar(item, true)"></Button>
                             </GridLayout>
                         </v-template>
                     </ListView>
