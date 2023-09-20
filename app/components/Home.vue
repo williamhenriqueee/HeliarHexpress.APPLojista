@@ -1,22 +1,18 @@
 <template>
     <Page actionBarHidden="false">
-        <ActionBar backgroundColor="#ffffff" title="">
-            <StackLayout orientation="horizontal"
-                ios:horizontalAlignment="left"
-                android:horizontalAlignment="left">
-                <Image src="~/images/logo.png" style="height:100px; float:right;"></Image>
+        <ActionBar flat="true" title="">
+            <StackLayout>
+                <Image src="~/images/logo.png" style="height:100px; float:left;"></Image>
             </StackLayout>
-            <ActionItem ios:horizontalAlignment="right" @tap="editar">
-                <Image src="~/images/logo-topo.png" style="height:100px; float:left;"></Image>
-                <Image class="edicao" src="res://edicao"></Image>
+            <ActionItem ios.position="right" width="50" @tap="editar">
+                <Image src="~/images/edicao.png" style="float:right;"></Image>
             </ActionItem>
-            <ActionItem ios:horizontalAlignment="right" @tap="logout">
-                <Image src="~/images/logo-topo.png" style="height:100px; float:left;"></Image>
-                <Image class="sair" src="res://sair"></Image>
-            </ActionItem>            
+            <ActionItem ios.position="right" width="50" @tap="logout">
+                <Image src="~/images/sair.png" style="float:right;"></Image>
+            </ActionItem>
         </ActionBar> 
-        <StackLayout backgroundColor="#045244"> 
-         <Tabs :selectedIndex="selectedIndex">
+        <StackLayout> 
+         <Tabs :selectedIndex="0">
             <TabStrip>
                 <TabStripItem @tap="pedidos">
                     <Label text="Pedidos"></Label>
@@ -29,20 +25,20 @@
             </TabStrip>
             <TabContentItem>
                 <ScrollView>
-                    <ListView for="item in items" class="list-group">
+                    <ListView for="item in items" class="list-group" style="background: #045244">
                         <v-template>
-                            <GridLayout columns="2/6*, 2/6*" backgroundColor="#148A64" rows="20,20,20,20,20,20,20,20" >						
-                                <Label class="lbl" col="0" row="0"  text="Código:" textWrap="true"></Label>                          
-                                <Label class="lbl lbl-bold" col="0" row="1"  :text="item.Codigo" textWrap="true"></Label>
-                                <Label class="lbl" col="0" row="2"  text="Loja:" textWrap="true"></Label>
-                                <Label class="lbl lbl-bold" col="0" row="3"  :text="item.Loja"></Label>
-                                <Label class="lbl" col="0" row="4"  text="Agendada para:" textWrap="true"></Label>
-                                <Label class="lbl lbl-bold" col="0" row="5"  :text="item.DataEntrega|FormataData" textWrap="true"></Label>
-                                <Label class="lbl" col="0" row="6"  text="Status:" textWrap="true"></Label>
-                                <Label class="lbl lbl-bold" col="0" row="7"  :text="item.Status" ></Label>
-                            
-                                <Button  rowSpan="3" row="0" col="1" class="btn btn-primary btn-orange" text="Visualizar" @tap="visualizar(item, false)"></Button>
-                                <Label class="lbl"  rowSpan="3" col="1" row="3"  text="*Clique em Visualizar para Aceitar ou rejeitar o Pedido"  verticalAlignment="center" textWrap="true"></Label>
+                            <GridLayout columns="2/6*, 2/6*" backgroundColor="#148A64" rows="20,20,20,20,20,20,20,20">
+                                <Label class="lbl" col="0" row="0" text="Código:" textWrap="true"></Label>
+                                <Label class="lbl lbl-bold" col="0" row="1" :text="item.Codigo" textWrap="true"></Label>
+                                <Label class="lbl" col="0" row="2" text="Loja:" textWrap="true"></Label>
+                                <Label class="lbl lbl-bold" col="0" row="3" :text="item.Loja"></Label>
+                                <Label class="lbl" col="0" row="4" text="Agendada para:" textWrap="true"></Label>
+                                <Label class="lbl lbl-bold" col="0" row="5" :text="item.DataEntrega|FormataData" textWrap="true"></Label>
+                                <Label class="lbl" col="0" row="6" text="Status:" textWrap="true"></Label>
+                                <Label class="lbl lbl-bold" col="0" row="7" :text="item.Status"></Label>
+
+                                <Button rowSpan="3" row="0" col="1" class="btn btn-primary btn-orange" text="Visualizar" @tap="visualizar(item, false)"></Button>
+                                <Label class="lbl" rowSpan="3" col="1" row="3" text="*Clique em Visualizar para Aceitar ou rejeitar o Pedido" verticalAlignment="center" textWrap="true"></Label>
                             </GridLayout>
                         </v-template>
                     </ListView>
@@ -67,7 +63,7 @@
                     </StackLayout>
                     <Button class="btn btn-primary btn-grey" :text="Status" @tap="statusPedido" />
 
-                    <ListView for="item in itemsHistorico" class="list-group">
+                    <ListView for="item in itemsHistorico" class="list-group" style="background: #045244">>
                         <v-template>
                             <GridLayout columns="2/6*, 2/6*" backgroundColor="#888888" rows="20,20,20,20,20,20,20,20" >						
                                 <Label class="lbl" col="0" row="0"  text="Código:" textWrap="true"></Label>                          
@@ -311,18 +307,21 @@
                     }
                 }); 
             },
-            pedidos(){
-                 this.$heliarApp
+            pedidos() {
+                 setTimeout(() => {
+                    this.$heliarApp
                     .pedidos()
                     .then((response)=> {
                         this.items = response.Pedidos;
                     })
                     .catch(() => {
                         alert("Erro ao encontrar seus pedidos");
-                    });
+                    }); 
+                 }, 1000);
             },
-            pedidosHistorico(){
-                this.$heliarApp
+            pedidosHistorico() {
+                setTimeout(() => {
+                    this.$heliarApp
                     .pedidosHistorico(this.PedidoStatus,  this.ValueDataDe, this.ValueDataAte)
                     .then((responseHistorico)=> {
                         this.itemsHistorico = responseHistorico.Pedidos;
@@ -330,6 +329,7 @@
                     .catch(() => {
                         alert("Erro ao encontrar seus pedidos");
                     });
+                }, 1000);
             },
             visualizar(e, isHistorico) {
                 this.$navigateTo(Pedido, {
