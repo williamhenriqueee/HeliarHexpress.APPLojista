@@ -54,6 +54,7 @@
 		F82160453D4B433DAB980B77 /* TNSCalendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F58F758A34F14448A1220BC7 /* TNSCalendar.framework */; };
 		F9C8687FBFCC48F09098E69F /* menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 516CB054FC7D4D41AC572974 /* menu@2x.png */; };
 		FCA4C65D06114F14BFDE4BEF /* TNSDataForm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9C9BE3DD808D43D5B766271A /* TNSDataForm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		EFD75422EC6A4AB485D22EC1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2409C14238794A30A683F525 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -140,6 +141,7 @@
 		F306F7F285CF4ADC977C0109 /* TNSGauge.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = TNSGauge.framework; path = "$(SRCROOT)/../../node_modules/nativescript-ui-gauge/platforms/ios/TNSGauge.framework"; sourceTree = "<group>"; };
 		F4E63FC2E74C4FE4B5934FA4 /* menu.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = image.png; name = menu.png; path = HeliarHexpressAPPLojista/Resources/menu.png; sourceTree = "<group>"; };
 		F58F758A34F14448A1220BC7 /* TNSCalendar.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = TNSCalendar.framework; path = "$(SRCROOT)/../../node_modules/nativescript-ui-calendar/platforms/ios/TNSCalendar.framework"; sourceTree = "<group>"; };
+		2409C14238794A30A683F525 /* GoogleService-Info.plist */ = {isa = PBXFileReference; name = "GoogleService-Info.plist"; path = "HeliarHexpressAPPLojista/Resources/GoogleService-Info.plist"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = text.plist.xml; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -244,13 +246,6 @@
 			name = "Build Scripts";
 			sourceTree = "<group>";
 		};
-		57C3E566915C484F814F08D3 /* TNSNativeSource */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = TNSNativeSource;
-			sourceTree = "<group>";
-		};
 		7296AC9BAD114107BA47BB65 /* kinvey-nativescript-sdk */ = {
 			isa = PBXGroup;
 			children = (
@@ -301,7 +296,7 @@
 				BF4BC7EAE403454497EFCC7C /* nativescript-secure-storage */,
 				3859890125FC4B0984512083 /* nativescript-sqlite */,
 				1C54D14C6DE14DD9A4201104 /* nativescript-ui-core */,
-				57C3E566915C484F814F08D3 /* TNSNativeSource */,
+				49EBEF5FB1974E24930E14E3 /* TNSNativeSource */,
 			);
 			sourceTree = "<group>";
 		};
@@ -421,6 +416,7 @@
 				2735C1F1A9DC43F2A3C63DBD /* settings.png */,
 				8A14D3190A124CE389C1A3E2 /* settings@2x.png */,
 				692DBB7777BD41E59424D0C9 /* settings@3x.png */,
+				2409C14238794A30A683F525 /* GoogleService-Info.plist */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -444,6 +440,13 @@
 			children = (
 			);
 			name = "nativescript-camera";
+			sourceTree = "<group>";
+		};
+		49EBEF5FB1974E24930E14E3 /* TNSNativeSource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = TNSNativeSource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -533,6 +536,7 @@
 				B2A3DEACC42646EE8D8B5E5E /* settings.png in Resources */,
 				6E00FD04A0654B42833EC19D /* settings@2x.png in Resources */,
 				DEDB1B408756487392CE1D2B /* settings@3x.png in Resources */,
+				EFD75422EC6A4AB485D22EC1 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -837,10 +841,11 @@
 					"\"$(SRCROOT)/../../app/App_Resources/iOS/src\"",
 					"\"$(SRCROOT)/../../app/App_Resources/iOS/src\"",
 					"\"$(SRCROOT)/../../app/App_Resources/iOS/src\"",
+					"\"$(SRCROOT)/../../app/App_Resources/iOS/src\"",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/HeliarHexpressAPPLojista/HeliarHexpressAPPLojista-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.clarios.mts.heliarexpress.ios.dev;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vm2.heliarexpress";
 				PRODUCT_NAME = HeliarHexpressAPPLojista;
 				WRAPPER_EXTENSION = app;
 			};
@@ -918,11 +923,12 @@
 					"\"$(SRCROOT)/../../app/App_Resources/iOS/src\"",
 					"\"$(SRCROOT)/../../app/App_Resources/iOS/src\"",
 					"\"$(SRCROOT)/../../app/App_Resources/iOS/src\"",
+					"\"$(SRCROOT)/../../app/App_Resources/iOS/src\"",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/HeliarHexpressAPPLojista/HeliarHexpressAPPLojista-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.clarios.mts.heliarexpress.ios.dev;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vm2.heliarexpress";
 				PRODUCT_NAME = HeliarHexpressAPPLojista;
 				WRAPPER_EXTENSION = app;
 			};

@@ -62,7 +62,7 @@
         <string>Editor</string>
         <key>CFBundleURLSchemes</key>
         <array>
-          <string>comclariosmtsheliarexpressiosdev</string>
+          <string>comvm2heliarexpress</string>
         </array>
       </dict>
     </array>
