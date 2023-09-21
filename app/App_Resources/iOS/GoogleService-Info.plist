@@ -9,7 +9,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.clarios.mts.heliarexpress.ios.dev</string>
+	<string>com.vm2.heliarexpress</string>
 	<key>PROJECT_ID</key>
 	<string>heliarexpressvm2</string>
 	<key>STORAGE_BUCKET</key>
@@ -25,7 +25,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:706902881211:ios:23c6a9f94793bd5a1b0a9e</string>
+	<string>1:706902881211:ios:adad609c86ea5eab1b0a9e</string>
 	<key>DATABASE_URL</key>
 	<string>https://heliarexpressvm2.firebaseio.com</string>
 </dict>
