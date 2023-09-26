@@ -252,7 +252,8 @@
     .login-label {
         horizontal-align: center;
         color: #A8A8A8;
-        font-size: 16;
+        font-size: 18;
+        margin-top:20;
     }
 
     .sign-up-label {

@@ -49,7 +49,7 @@
                 </StackLayout>
                 <Label class="h3">
                     <FormattedString>
-                        <Span text="Veiculo: ">
+                        <Span text="Veículo: ">
                         </Span>
                         <Span :text="Pedidos.Modelo" class="bold">
                         </Span>
@@ -204,7 +204,7 @@
             </StackLayout>
 
             <Button class="btn espacamento btn-primary btn-green" v-show="!Historico && !isAceito" text="Aceitar" @tap="aceitar"></Button>
-            <Button class="btn espacamento btn-primary btn-red"  v-show="!Historico && !isAceito" text="recusar" @tap="rejeitar"></Button>
+            <Button class="btn espacamento btn-primary btn-red"  v-show="!Historico && !isAceito" text="Recusar" @tap="rejeitar"></Button>
 
             <Button class="btn espacamento btn-primary btn-green" v-show="Historico && isEncerrar" text="Finalizar Pedido" @tap="encerrar"></Button>
             <Button class="btn espacamento btn-primary btn-red"  v-show="Historico && isCancelar" text="Cancelar Pedido" @tap="cancelar"></Button>
@@ -285,9 +285,13 @@
             FormataTelefone: function (value){
                 if(value == undefined) { return '' };
                 
-                var tel = value;
-                tel = tel.replace('(', '').replace(')', '');
-                return "<label textWrap='true'><span>Tel</span>: " + tel + "<label>";
+                var tel = value.split("#")[0];
+
+                var telFormatado = tel;
+                tel = tel.replace('(', '').replace(')', '').replace(' ', '').replace('-', '');
+                telFormatado = telFormatado.replace('(', '').replace(')', ' ').replace(' ', '');
+
+                return "<label textWrap='true'><span>Tel</span>: <a class='bold' href='55" + tel + " '>" + telFormatado + "</a></label>";
             },
             FormataWhats: function (value){
                 if(value == undefined) { return '' };

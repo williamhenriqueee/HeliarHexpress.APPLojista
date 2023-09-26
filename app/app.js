@@ -41,20 +41,22 @@ setTimeout(()=>{
                     okButtonText: "Visualizar",
                     cancelButtonText: "Cancelar"
                 }).then((result) => {
-                    Vue.prototype.$heliarApp 
-                    .isLoggedIn()
-                    .then((response)=> {                    
-                        if(response.Status == false){
-                            mensagem("Usuário não autenticado para visualizar o pedido");
-                            navigateToLogin(routes.login);
-                        }
-                        else{
-                            navigateTo(routes.pedido, codigo, historico);   
-                        }
-                    })
-                    .catch(() => {
-                        alert("Erro ao verificar autenticação do usuário");
-                    });
+                    if (result) {
+                        Vue.prototype.$heliarApp
+                            .isLoggedIn()
+                            .then((response) => {
+                                if (response.Status == false) {
+                                    mensagem("Usuário não autenticado para visualizar o pedido");
+                                    navigateToLogin(routes.login);
+                                }
+                                else {
+                                    navigateTo(routes.pedido, codigo, historico);
+                                }
+                            })
+                            .catch(() => {
+                                alert("Erro ao verificar autenticação do usuário");
+                            });
+                    }
                 });
               },
               showNotifications: true,

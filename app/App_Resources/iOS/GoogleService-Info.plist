@@ -1,32 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<dict>
-	<key>API_KEY</key>
-	<string>AIzaSyCGkxF7ow2Tp9Gr_21y1Chr8gCKFm-0HQo</string>
-	<key>GCM_SENDER_ID</key>
-	<string>706902881211</string>
-	<key>PLIST_VERSION</key>
-	<string>1</string>
-	<key>BUNDLE_ID</key>
-	<string>com.clarios.mts.heliarexpress.ios.dev</string>
-	<key>PROJECT_ID</key>
-	<string>heliarexpressvm2</string>
-	<key>STORAGE_BUCKET</key>
-	<string>heliarexpressvm2.appspot.com</string>
-	<key>IS_ADS_ENABLED</key>
-	<false></false>
-	<key>IS_ANALYTICS_ENABLED</key>
-	<false></false>
-	<key>IS_APPINVITE_ENABLED</key>
-	<true></true>
-	<key>IS_GCM_ENABLED</key>
-	<true></true>
-	<key>IS_SIGNIN_ENABLED</key>
-	<true></true>
-	<key>GOOGLE_APP_ID</key>
-	<string>1:706902881211:ios:ad2968fe7528d61e1b0a9e</string>
-	<key>DATABASE_URL</key>
-	<string>https://heliarexpressvm2.firebaseio.com</string>
-</dict>
+  <dict>
+    <key>API_KEY</key>
+    <string>AIzaSyA9xkj70nipkJwHjZAcNjuW_fe3tPLGuds</string>
+    <key>GCM_SENDER_ID</key>
+    <string>778833068329</string>
+    <key>PLIST_VERSION</key>
+    <string>1</string>
+    <key>BUNDLE_ID</key>
+    <string>com.clarios.mts.heliarexpress.ios.dev</string>
+    <key>PROJECT_ID</key>
+    <string>com-clarios-heliar-express</string>
+    <key>STORAGE_BUCKET</key>
+    <string>com-clarios-heliar-express.appspot.com</string>
+    <key>IS_ADS_ENABLED</key>
+    <false></false>
+    <key>IS_ANALYTICS_ENABLED</key>
+    <false></false>
+    <key>IS_APPINVITE_ENABLED</key>
+    <true></true>
+    <key>IS_GCM_ENABLED</key>
+    <true></true>
+    <key>IS_SIGNIN_ENABLED</key>
+    <true></true>
+    <key>GOOGLE_APP_ID</key>
+    <string>1:778833068329:ios:c34d5d7d6ff8880e79b738</string>
+  </dict>
 </plist>
