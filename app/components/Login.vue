@@ -40,8 +40,8 @@
                     <Button :text="isLoggingIn ? 'Entrar' : 'Sign Up'"
                         :isEnabled="!processing" @tap="submit"
                         class="btn btn-primary btn-green m-t-20"></Button>
-                    <Label *v-show="isLoggingIn" text="Esqueceu sua senha?"
-                        class="login-label" @tap="forgotPassword()"></Label>
+                    <Button *v-show="isLoggingIn" text="Esqueceu sua senha?"
+                        class="login-label" @tap="forgotPassword()"></Button>
                     <!--<WebView v-if="!this.isRecaptcha" src="https://www.heliarexpress.com.br/recaptcha.html" @loadFinished='(e)=> {this.recaptcha(e)}' />-->
                         </StackLayout>
                     </GridLayout>
