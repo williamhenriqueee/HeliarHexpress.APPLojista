@@ -19,6 +19,7 @@ Vue.prototype.$heliarApp = heliarApp;
 const { alert, confirm, prompt, login, action, inputType } = require("tns-core-modules/ui/dialogs");
 var firebase = require("nativescript-plugin-firebase");
 var applicationSettings = require("application-settings");
+var dialogs = require("tns-core-modules/ui/dialogs");
 
 setTimeout(()=>{
   firebase.init()
@@ -35,13 +36,13 @@ setTimeout(()=>{
                 var codigo = message.data.key_1;
                 var historico = message.data.key_2;
 
-                alert({
-                    title: message.data.title,
-                    message: message.data.body,
-                    okButtonText: "Visualizar",
-                    cancelButtonText: "Cancelar"
-                }).then((result) => {
-                    if (result) {
+                  dialogs.confirm({
+                      title: message.data.title,
+                      message: message.data.body,
+                      okButtonText: "Visualizar",
+                      cancelButtonText: "Cancelar"
+                  }).then((result) => {
+                      if (result == true) {
                         Vue.prototype.$heliarApp
                             .isLoggedIn()
                             .then((response) => {

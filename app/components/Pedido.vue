@@ -291,7 +291,7 @@
                 tel = tel.replace('(', '').replace(')', '').replace(' ', '').replace('-', '');
                 telFormatado = telFormatado.replace('(', '').replace(')', ' ').replace(' ', '');
 
-                return "<label textWrap='true'><span>Tel</span>: <a class='bold' href='55" + tel + " '>" + telFormatado + "</a></label>";
+                return "<label textWrap='true'><span>Tel</span>: <a class='bold' href='tel://55" + tel + " '>" + telFormatado + "</a></label>";
             },
             FormataWhats: function (value){
                 if(value == undefined) { return '' };
