@@ -40,7 +40,7 @@ setTimeout(()=>{
                       title: message.data.title,
                       message: message.data.body,
                       okButtonText: "Visualizar",
-                      cancelButtonText: "Cancelar"
+                      cancelButtonText: "Cancelar" 
                   }).then((result) => {
                       if (result == true) {
                         Vue.prototype.$heliarApp
