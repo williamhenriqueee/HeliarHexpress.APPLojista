@@ -44,7 +44,7 @@ jobs:
           sudo chmod -R a+rwx ./platforms/ios/
         
       - name: Build IOS release 
-        run: tns build ios --for-device --env.production --provision 92db3042-b46a-44c6-9857-f1cadabe2def
+        run: tns build ios --for-device --env.production --provision 0449cca8-4b47-4615-9fb4-b3278c998e09
 
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
