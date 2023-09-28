@@ -21,79 +21,74 @@ var firebase = require("nativescript-plugin-firebase");
 var applicationSettings = require("application-settings");
 var dialogs = require("tns-core-modules/ui/dialogs");
 
-setTimeout(() => {
+setTimeout(()=>{
+  firebase.init()
+      .then(instance => {
+          messaging.registerForPushNotifications({
 
-    firebase.init({
+              onPushTokenReceivedCallback: (token) => {
+                  console.log("Firebase plugin received a push token: " + token);
+                  applicationSettings.setString('device_token', token);
+                  config.setToken(token);
+              },
 
-        onPushTokenReceivedCallback: (token) => {
+              onMessageReceivedCallback: (message) => {
+                var codigo = message.data.key_1;
+                var historico = message.data.key_2;
 
-            console.log("Firebase plugin received a push token: " + token);
+                  dialogs.confirm({
+                      title: message.data.title,
+                      message: message.data.body,
+                      okButtonText: "Visualizar",
+                      cancelButtonText: "Cancelar"
+                  }).then((result) => {
+                      if (result == true) {
+                        Vue.prototype.$heliarApp
+                            .isLoggedIn()
+                            .then((response) => {
+                                if (response.Status == false) {
+                                    mensagem("Usuário não autenticado para visualizar o pedido");
+                                    navigateToLogin(routes.login);
+                                }
+                                else {
+                                    navigateTo(routes.pedido, codigo, historico);
+                                }
+                            })
+                            .catch(() => {
+                                alert("Erro ao verificar autenticação do usuário");
+                            });
+                    }
+                });
+              },
+              showNotifications: true,
+              showNotificationsWhenInForeground: true
+          })
+            .then(() => console.log("Registered for push"))
+            .catch(error => console.log(`registerForPushNotifications error: ${error}`));
 
-            applicationSettings.setString("device_token", token);
-
-            config.setToken(token);
-
-        },
-
-
-
-        onMessageReceivedCallback: (message) => {
-
-            var codigo = message.data.key_1;
-
-            var historico = message.data.key_2;
-
-
-
-            alert({
-
-                title: message.data.title,
-
-                message: message.data.body,
-
-                okButtonText: "Visualizar",
-
-                cancelButtonText: "Cancelar",
-
-            }).then((result) => {
-
-                Vue.prototype.$heliarApp
-
-                    .isLoggedIn()
-
-                    .then((response) => {
-
-                        if (response.Status == false) {
-
-                            mensagem("Usuário não autenticado para visualizar o pedido");
-
-                            navigateToLogin(routes.login);
-
-                        } else {
-
-                            navigateTo(routes.pedido, codigo, historico);
-
-                        }
-
-                    })
-
-                    .catch(() => {
-
-                        alert("Erro ao verificar autenticação do usuário");
-
-                    });
-
-            });
-
-        },
-
-        showNotifications: true,
-
-        showNotificationsWhenInForeground: true,
-
-    });
-
-}, 3000)
+          setTimeout(()=>{
+              messaging.getCurrentPushToken()
+                  .then(token => {
+                      this.registerFirebase(token);
+                  }, e => console.log("Error: " + (e.message || e)));
+          }, 5000);
+      })
+      .catch(error => {
+          console.log(`firebase.init error: ${error}`);
+          console.log("Prepare get token..");
+          setTimeout(()=>{
+              console.log("Getting token..");
+              messaging.getCurrentPushToken()
+                  .then(token => {
+                      console.log("Token found: ", token);
+                      this.registerFirebase(token);
+                  })
+                  .catch(e => {
+                      console.log("Error getting token: " + (e.message || e));
+                  });
+          }, 5000);
+      });
+    },3000),
 
 new Vue({
   render: h => h("frame", [h(backendService.isLoggedIn() ? routes.home : routes.login)])
