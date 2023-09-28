@@ -20,7 +20,6 @@ const { alert, confirm, prompt, login, action, inputType } = require("tns-core-m
 var firebase = require("nativescript-plugin-firebase");
 var applicationSettings = require("application-settings");
 var dialogs = require("tns-core-modules/ui/dialogs");
-[15: 46] Victor Domingues
 
 setTimeout(() => {
 
