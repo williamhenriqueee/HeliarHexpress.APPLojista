@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-      - masterIOS
+      - QAIOS
 name: 🚀 Deploy website on push
 jobs:
   build:
