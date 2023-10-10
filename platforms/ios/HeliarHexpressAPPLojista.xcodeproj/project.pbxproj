@@ -810,7 +810,7 @@
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/HeliarHexpressAPPLojista/HeliarHexpressAPPLojista-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.clarios.mts.heliarexpress.ios.dev;
+				PRODUCT_BUNDLE_IDENTIFIER = com.clarios.mts.heliarexpress.ios.qa;
 				PRODUCT_NAME = HeliarHexpressAPPLojista;
 				WRAPPER_EXTENSION = app;
 			};
@@ -864,7 +864,7 @@
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/HeliarHexpressAPPLojista/HeliarHexpressAPPLojista-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.clarios.mts.heliarexpress.ios.dev;
+				PRODUCT_BUNDLE_IDENTIFIER = com.clarios.mts.heliarexpress.ios.qa;
 				PRODUCT_NAME = HeliarHexpressAPPLojista;
 				WRAPPER_EXTENSION = app;
 			};
