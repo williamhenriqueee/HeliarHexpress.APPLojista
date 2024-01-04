@@ -20,8 +20,8 @@ jobs:
 
       - uses: apple-actions/import-codesign-certs@v1
         with: 
-            p12-filepath: './CertificatesApple.p12'
-            p12-password: apple@@2023 
+            p12-filepath: './20230619_clarios_applestore_export_Certificates.p12'
+            p12-password: rw6vRuF3FTQI 
  
       - name: Provisioning Profiles 
         run: | 
