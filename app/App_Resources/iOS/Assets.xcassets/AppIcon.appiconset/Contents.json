@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "idiom" : "universal",
+      "idiom" : "universal", 
       "platform" : "ios",
       "scale" : "2x",
       "size" : "20x20"
